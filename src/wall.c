@@ -1,4 +1,5 @@
 #include "../headers/header.h"
+#include <math.h>
 
 /**
  * changeColorIntensity - change color intensity
@@ -39,8 +40,8 @@ void renderFloor(int wallBottomPixel, color_t *texelColor, int x)
 		distance = (ratio * PROJ_PLANE)
 					/ cos(rays[x].rayAngle - player.rotationAngle);
 
-		textureOffsetY = (int)abs((distance * sin(rays[x].rayAngle)) + player.y);
-		textureOffsetX = (int)abs((distance * cos(rays[x].rayAngle)) + player.x);
+		textureOffsetY = (int)fabs((distance * sin(rays[x].rayAngle)) + player.y);
+		textureOffsetX = (int)fabs((distance * cos(rays[x].rayAngle)) + player.x);
 
 		textureOffsetX = (int)(abs(textureOffsetX * texture_width / 30)
 								% texture_width);
@@ -75,8 +76,8 @@ void renderCeil(int wallTopPixel, color_t *texelColor, int x)
 		distance = (ratio * PROJ_PLANE)
 					/ cos(rays[x].rayAngle - player.rotationAngle);
 
-		textureOffsetY = (int)abs((-distance * sin(rays[x].rayAngle)) + player.y);
-		textureOffsetX = (int)abs((-distance * cos(rays[x].rayAngle)) + player.x);
+		textureOffsetY = (int)fabs((-distance * sin(rays[x].rayAngle)) + player.y);
+		textureOffsetX = (int)fabs((-distance * cos(rays[x].rayAngle)) + player.x);
 
 		textureOffsetX = (int)(abs(textureOffsetX * texture_width / 40)
 								% texture_width);
