@@ -13,13 +13,20 @@ project_folder/
 | |-- enemy.c
 | |-- rain.c
 | |-- effects.c
-|-- inc/
-| |-- rendering.h
-| |-- input_handling.h
-| |-- map.h
-| |-- enemy.h
-| |-- rain.h
-| |-- effects.h
+|-- headers/
+| |-- header.h
+| |-- upng.h
+|-- images/
+| |-- SNES - Wolfenstein 3D - Decorations.png
+| |-- Wall6.png
+| |-- bluestone.png 
+| |-- colorstone.png
+| |-- eagle.png
+| |-- graystone.png
+| |-- mossystone.png
+| |-- purplestone.png
+| |-- redbrick.png
+| |-- wood.png
 
 ## Steps
 
